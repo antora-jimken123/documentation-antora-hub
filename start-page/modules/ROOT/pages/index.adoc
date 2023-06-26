@@ -1,3 +1,5 @@
 # Welcome to the Demo
 
 Lorem.
+
+This page is sourced from /start-page/modules/ROOT/pages/index.adoc
