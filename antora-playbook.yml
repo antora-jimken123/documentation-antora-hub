@@ -47,13 +47,6 @@ content:
     start_path: docs
     branches:
       - master
-  - url: https://github.com/OpenNMS/alec.git
-    start_path: docs
-    branches:
-      - develop     
-    tags:
-      - v*
-      - '!v2.*.*'
   - url: https://github.com/OpenNMS/helm-charts.git
     start_path: docs
     branches:
