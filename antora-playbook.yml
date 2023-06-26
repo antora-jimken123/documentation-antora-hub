@@ -10,11 +10,9 @@ runtime:
   cache_dir: ./.cache/antora
   fetch: true
 site:
-  title: Docs
+  title: Midokura Documentation
   # the 404 page and sitemap files only get generated when the url property is set
-  url: https://docs.opennms.com/
-  keys:
-    google_analytics: 'G-WR2RML9P8J'
+  url: https://docs1.midokura.com
   start_page: start-page::index.adoc
   robots: disallow
 content:
@@ -46,11 +44,8 @@ content:
   - url: https://github.com/midokura/documentation-ASCII1.git
     start_path: docs
     branches:
-      - master
-  - url: https://github.com/OpenNMS/helm-charts.git
-    start_path: docs
-    branches:
-      - main
+      - yeah
+      - defo
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
     start_path: docs
     branches:
