@@ -43,7 +43,7 @@ content:
     branches:
       - 'main-*'
       - '!main-7'
-    - url: https://github.com/midokura/documentation-ASCII1.git
+  - url: https://github.com/midokura/documentation-ASCII1.git
     start_path: docs
     branches:
       - master
