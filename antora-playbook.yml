@@ -45,8 +45,7 @@ content:
     start_path: docs
     branches:
       - master
-      - yeah
-      - defo
+      - ohyeah
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
     start_path: docs
     branches:
