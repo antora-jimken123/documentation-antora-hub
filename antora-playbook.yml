@@ -16,7 +16,7 @@ site:
   keys:
     google_analytics: 'G-WR2RML9P8J'
   start_page: start-page::index.adoc
-  robots: allow
+  robots: disallow
 content:
   sources:
   # Generic start page
@@ -77,7 +77,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/opennms-forge/antora-ui-opennms/releases/download/v3.1.0/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files: ./supplemental_ui
 asciidoc:
