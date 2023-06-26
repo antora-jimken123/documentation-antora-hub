@@ -37,16 +37,6 @@ content:
       - '!master-22'
       - '!master-21'
       - '!master-20'
-  - url: https://GITHUB_PRIME_TOKEN@github.com/OpenNMS/opennms-prime.git
-    start_path: docs
-    branches:
-      - 'master-*'
-      - '!master-2020'
-      - '!master-2019'
-      - '!master-2018'
-      - '!master-2017'
-      - '!master-2016'
-      - '!master-2015'
   # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
   - url: https://github.com/opennms/grafana-plugin.git
     start_path: docs
@@ -85,21 +75,6 @@ content:
       - release-*
       - '!release-1.1*'
       - '!release-1.0*'
-  - url: https://github.com/OpenNMS/opennms-js.git
-    start_path: docs-src
-    branches: develop
-    tags:
-    - v*
-    - '!v0.*'
-    - '!v1.*'
-    - '!v2.0.0'
-    - '!v2.0.1'
-    - '!v2.0.2'
-    - '!v2.5.0'
-    - '!v2.5.1'
-    - '!v2.5.2'
-    - '!v2.5.3'
-    - '!v2.5.4'
 ui:
   bundle:
     url: https://github.com/opennms-forge/antora-ui-opennms/releases/download/v3.1.0/ui-bundle.zip
