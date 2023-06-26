@@ -44,6 +44,7 @@ content:
   - url: https://github.com/midokura/documentation-ASCII1.git
     start_path: docs
     branches:
+      - master
       - yeah
       - defo
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
