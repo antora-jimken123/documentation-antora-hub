@@ -62,7 +62,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/midokura/documentation-antora-ui/blob/main/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/midokura/documentation-antora-ui/main/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files: ./supplemental_ui
 asciidoc:
