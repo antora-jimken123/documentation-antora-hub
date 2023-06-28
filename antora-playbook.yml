@@ -22,20 +22,6 @@ content:
   - url: .
     start_path: start-page
     branches: HEAD
-  - url: https://github.com/OpenNMS/opennms.git
-    start_path: docs
-    branches:
-      - 'master-*'
-      - '!master-29'
-      - '!master-28'
-      - '!master-27'
-      - '!master-26'
-      - '!master-25'
-      - '!master-24'
-      - '!master-23'
-      - '!master-22'
-      - '!master-21'
-      - '!master-20'
   # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
   - url: https://github.com/opennms/grafana-plugin.git
     start_path: docs
