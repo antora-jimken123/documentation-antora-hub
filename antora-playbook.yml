@@ -16,6 +16,7 @@ site:
   start_page: start-page::index.adoc
   robots: disallow
 content:
+  edit_url: ~ 
   sources:
   # Generic start page
   - url: .
@@ -62,7 +63,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/opennms-forge/antora-ui-opennms/releases/download/v3.1.0/ui-bundle.zip
+    url: https://github.com/decidim/documentation-antora-ui/releases/download/v0.4/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
