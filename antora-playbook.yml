@@ -49,7 +49,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/midokura/documentation-antora-decidim-ui/releases/download/2.0/ui-bundle.zip
+    url: https://github.com/midokura/documentation-antora-decidim-ui/releases/download/1.0/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
