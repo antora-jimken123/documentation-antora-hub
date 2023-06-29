@@ -42,8 +42,7 @@ content:
   - url: https://github.com/midokura/documentation-hc.git
     start_path: docs
     branches:
-      - 2.0
-      - 3.0
+      - 1111
   - url: https://github.com/OpenNMS/opennms-provisioning-integration-server.git
     start_path: docs
     branches:
