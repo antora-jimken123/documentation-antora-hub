@@ -67,6 +67,7 @@ asciidoc:
     tabs: tabs
   extensions:
     - ./lib/tabs-block.js
+    - '@antora/lunr-extension'
 output:
   clean: true
   dir: ./public
