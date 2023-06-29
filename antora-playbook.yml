@@ -16,26 +16,23 @@ site:
   start_page: start-page::index.adoc
   robots: disallow
 content:
+  edit_url: ~
   sources:
   # Generic start page
-  - url: .
-    edit_url: false
+  - url: https://github.com/midokura/documentation-opennms.git
     start_path: start-page
     branches: HEAD
   - url: https://github.com/opennms/grafana-plugin.git
-    edit_url: ~
     start_path: docs
     branches:
       - 'main-*'
       - '!main-7'
   - url: https://github.com/midokura/documentation-ASCII1.git
-    edit_url: ~
     start_path: docs
     branches:
       - master
       - ohyeah
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
-    edit_url: ~
     start_path: docs
     branches:
       - main
@@ -44,7 +41,6 @@ content:
       - v*
       - '!v1.0.0'
   - url: https://github.com/OpenNMS/opennms-provisioning-integration-server.git
-    edit_url: ~
     start_path: docs
     branches:
       - release-*
@@ -52,7 +48,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/midokura/documentation-antora-decidim-ui/releases/download/2.0/ui-bundle.zip
+    url: https://github.com/midokura/documentation-antora-ui/releases/download/2.0/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
