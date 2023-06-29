@@ -40,6 +40,11 @@ content:
     tags:
       - v*
       - '!v1.0.0'
+  - url: https://github.com/midokura/documentation-hc.git
+    start_path: docs
+    branches:
+      - 2.0
+      - 3.0
   - url: https://github.com/OpenNMS/opennms-provisioning-integration-server.git
     start_path: docs
     branches:
