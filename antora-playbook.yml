@@ -36,7 +36,7 @@ content:
     start_path: docs
     branches:
       - main
-      - /^release-.*/
+      - release-1.x
     tags:
       - v*
       - '!v1.0.0'
