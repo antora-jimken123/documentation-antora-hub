@@ -30,8 +30,8 @@ content:
   - url: https://github.com/midokura/documentation-ASCII1.git
     start_path: docs
     branches:
-      - master
-      - ohyeah
+      - 2.0
+      - 3.0
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
     start_path: docs
     branches:
