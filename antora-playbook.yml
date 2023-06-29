@@ -12,11 +12,11 @@ runtime:
 site:
   title: Midokura Documentation
   # the 404 page and sitemap files only get generated when the url property is set
-  url: https://docs1.midokura.com
+  url: https://docs.midokura.com
   start_page: start-page::index.adoc
   robots: disallow
 content:
-  edit_url: ~ 
+  edit_url: false
   sources:
   # Generic start page
   - url: .
@@ -49,7 +49,7 @@ content:
       - '!release-1.0*'
 ui:
   bundle:
-    url: https://github.com/midokura/documentation-antora-decidim-ui/releases/download/1.0/ui-bundle.zip
+    url: https://github.com/midokura/documentation-antora-decidim-ui/releases/download/2.0/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
