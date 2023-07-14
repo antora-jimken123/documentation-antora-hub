@@ -8,7 +8,7 @@ The website requires:
 - several contributing repos that supply the content.
 - a UI repo that styles the website.
 
-Any repo can contribute by setting up a specific folder structure for Antora and having it referenced in the playbook repo.
+Any repo can contribute by setting up a specific folder structure for Antora and having it referenced in the playbook repo. Instructions and template here: https://github.com/midokura/documentation-hc/tree/main#readme
 
 Examples of sets of content from different repos are seen in the sidebar on the left. To toggle to a different version click in the bottom left or the dropdown on the top right.
 
