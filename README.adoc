@@ -23,7 +23,7 @@ cd documentation-opennms
 npm install
 
 # build the static site
-npm run build
+npx antora antora-playbook.yml
 
 # The generated website will be create under ```build/site/``` folder. Open ```index.html``` with any browser.
 xdg-open build/site/index.html
