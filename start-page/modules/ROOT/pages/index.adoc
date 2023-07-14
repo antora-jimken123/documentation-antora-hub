@@ -1,5 +1,19 @@
-# Welcome to the Demo
+# Welcome to the Antora (ASCIIDocs) demo website.
 
-Lorem.
+This website is build on Antora framework, using ASCIIDoc files (.adoc). One website built centrally, but collating content from various repos, with easy versioning based on branches.
 
-This page is sourced from /start-page/modules/ROOT/pages/index.adoc
+The website requires:
+
+- a playbook repo that collates everything and builds using antora-playbook.yml.
+- several contributing repos that supply the content.
+- a UI repo that styles the website.
+
+Any repo can contribute by setting up a specific folder structure for Antora and having it referenced in the playbook repo.
+
+Examples of sets of content from different repos are seen in the sidebar on the left. To toggle to a different version click in the bottom left or the dropdown on the top right.
+
+## Sources
+
+- Playbook repo: https://github.com/midokura/documentation-opennms
+- Example contributing repo: https://github.com/midokura/documentation-hc
+- UI repo: https://github.com/midokura/documentation-antora-ui
