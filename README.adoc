@@ -1,12 +1,10 @@
 # ASCIIDocs Documentation
 
-This is the repository for the [Test Documentation website](https://test.docs.midokura.com.org). It is built with https://antora.org[Antora].
+This is the repository for the https://test.docs.midokura.com[Test Documentation website]. It is built with https://antora.org[Antora].
 
 ## Install locally
 
-### Manually
-
-https://docs.antora.org/antora/2.3/install-and-run-quickstart[Install antora] with software dependencies.
+Background: https://docs.antora.org/antora/2.3/install-and-run-quickstart[Install antora] with software dependencies.
 
 ```bash
 # Install Node and Npm, for instance using nvm:
