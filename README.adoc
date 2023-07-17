@@ -1,19 +1,19 @@
 # ASCIIDocs Documentation
 
-This is the repository for the [Template Documentation website](https://example.org/). Is built with [Antora](https://antora.org/).
+This is the repository for the [Test Documentation website](https://test.docs.midokura.com.org). It is built with https://antora.org[Antora].
 
 ## Install locally
 
 ### Manually
 
-[Install antora](https://docs.antora.org/antora/2.3/install-and-run-quickstart/) with software dependencies.
+https://docs.antora.org/antora/2.3/install-and-run-quickstart[Install antora] with software dependencies.
 
 ```bash
 # Install Node and Npm, for instance using nvm:
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install node
 
-# If antora installation succeed, `antora -v` will return antora's version.
+# If the antora installation succeeds, `antora -v` will return antora's version.
 
 # Clone repository and build documentation website.
 git clone https://github.com/midokura/documentation-opennms
@@ -25,6 +25,6 @@ npm install
 # build the static site
 npx antora antora-playbook.yml
 
-# The generated website will be create under ```build/site/``` folder. Open ```index.html``` with any browser.
+# The generated website will be created under ```build/site/``` folder. Open ```index.html``` with any browser.
 xdg-open build/site/index.html
 ```
