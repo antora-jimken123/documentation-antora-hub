@@ -22,15 +22,6 @@ content:
   - url: https://github.com/midokura/documentation-opennms.git
     start_path: start-page
     branches: HEAD
-  - url: https://github.com/opennms/grafana-plugin.git
-    start_path: docs
-    branches:
-      - 'main-*'
-      - '!main-7'
-  - url: https://github.com/midokura/documentation-ASCII1.git
-    start_path: docs
-    branches:
-      - 4.0
   - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
     start_path: docs
     branches:
