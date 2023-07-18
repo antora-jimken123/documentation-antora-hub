@@ -19,17 +19,9 @@ content:
   edit_url: ~
   sources:
   # Generic start page
-  - url: https://github.com/midokura/documentation-opennms.git
+  - url: https://github.com/midokura/documentation-antora-hub.git
     start_path: start-page
     branches: HEAD
-  - url: https://github.com/OpenNMS/opennms-velocloud-plugin.git
-    start_path: docs
-    branches:
-      - main
-      - release-1.x
-    tags:
-      - v*
-      - '!v1.0.0'
   - url: https://github.com/midokura/documentation-hc.git
     start_path: docs
     branches:
@@ -39,11 +31,10 @@ content:
     start_path: docs
     branches:
       - 4444
-  - url: https://github.com/OpenNMS/opennms-provisioning-integration-server.git
+  - url: https://github.com/midokura/documentation-prismatic.git
     start_path: docs
     branches:
-      - release-1.3.1
-      - release-1.2.0
+      - 1
 ui:
   bundle:
     url: https://github.com/midokura/documentation-antora-ui/releases/download/2.0/ui-bundle.zip
