@@ -44,6 +44,10 @@ content:
     branches:
       - 1111
       - 2222
+  - url: https://github.com/midokura/documentation-hc-private.git
+    start_path: docs
+    branches:
+      - 4444
   - url: https://github.com/OpenNMS/opennms-provisioning-integration-server.git
     start_path: docs
     branches:
