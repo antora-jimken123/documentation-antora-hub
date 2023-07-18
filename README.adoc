@@ -31,9 +31,9 @@ xdg-open build/site/index.html
 
 By default Antora works with public repos; to make it work with a private repo you need to supply it with a Personal Access Token (PAT).
 
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic[Create your PAT]
+1. https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic[Create your PAT]
 
-https://docs.antora.org/antora/latest/playbook/private-repository-auth/#populate-credentials-interactively[Deploy your PAT]
+2. https://docs.antora.org/antora/latest/playbook/private-repository-auth/#populate-credentials-interactively[Deploy your PAT]
 
 ```bash
 git config --global credential.helper store && echo -n 'Repository URL: ' && read REPLY && git ls-remote -h $REPLY > /dev/null
