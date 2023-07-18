@@ -1,4 +1,4 @@
-# ASCIIDocs Documentation
+# Antora (ASCIIDocs) Documentation
 
 This is the repository for the https://test.docs.midokura.com[Test Documentation website]. It is built with https://antora.org[Antora].
 
@@ -25,4 +25,25 @@ npx antora antora-playbook.yml
 
 # The generated website will be created under ```build/site/``` folder. Open ```index.html``` with any browser.
 xdg-open build/site/index.html
+```
+
+## Allow private repos
+
+By default Antora works with public repos; to make it work with a private repo you need to supply it with a Personal Access Token (PAT).
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic[Create your PAT]
+
+https://docs.antora.org/antora/latest/playbook/private-repository-auth/#populate-credentials-interactively[Deploy your PAT]
+
+```bash
+git config --global credential.helper store && echo -n 'Repository URL: ' && read REPLY && git ls-remote -h $REPLY > /dev/null
+```
+
+You will be prompted for the URL of the private repository you want to use.
+
+Now you can rebuild with the private repo.
+
+```bash
+# build the static site
+npx antora antora-playbook.yml
 ```
