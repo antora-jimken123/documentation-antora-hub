@@ -35,6 +35,7 @@ content:
     start_path: docs
     branches:
       - 1
+      - 2
 ui:
   bundle:
     url: https://github.com/midokura/documentation-antora-ui/releases/download/2.0/ui-bundle.zip
