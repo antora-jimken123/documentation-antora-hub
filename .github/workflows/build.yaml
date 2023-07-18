@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: sh
+    container:
+      image: antora/antora:3.1.4
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install deps
+      run: |
+        apk add bash make
+        npm install
+    - run: make docs
+    - run: |
+        ls -l build/*
