@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: docs-amd64-stable
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: sh
