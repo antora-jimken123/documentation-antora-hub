@@ -1,4 +1,10 @@
-# Welcome to the Antora (ASCIIDocs) demo website.
+# Welcome to the Antora (ASCIIDocs) demo website
+
+[options="autowidth"]
+|===
+|Version: |{page-component-display-version}
+|Source:  |{page-origin-url}
+|===
 
 This website is build on Antora framework, using ASCIIDoc files (.adoc). One website built centrally, but collating content from various repos, with easy versioning based on branches.
 
