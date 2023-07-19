@@ -1,6 +1,3 @@
 name: start-page
 version: 1
 title: Home
-asciidoc:
-  attributes:
-    full-version: ~
