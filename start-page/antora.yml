@@ -1,5 +1,5 @@
 name: start-page
-version: ~
+version: '1'
 title: Home
 asciidoc:
   attributes:
