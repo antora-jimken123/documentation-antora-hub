@@ -13,8 +13,6 @@ jobs:
     defaults:
       run:
         shell: sh
-    # container:
-    #   image: antora/antora:3.1.4
     steps:
     - uses: actions/checkout@v3
 
