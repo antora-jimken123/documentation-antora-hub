@@ -18,15 +18,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install deps
-      run: |
-        apk add bash make
-
     - name: Setup Node/NPM
       uses: actions/setup-node@v3
       with:
         cache: 'npm'
-        
+    
+    - name: Install deps
+      run: |
+        apk add bash make
+        npm install
+
     - name: Build the website using make
       run: make docs
 
