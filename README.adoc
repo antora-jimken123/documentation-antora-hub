@@ -14,8 +14,8 @@ nvm install node
 # If the antora installation succeeds, `antora -v` will return antora's version.
 
 # Clone this repository
-git clone https://github.com/midokura/documentation-opennms
-cd documentation-opennms
+git clone https://github.com/midokura/documentation-antora-hub
+cd documentation-antora-hub
 
 # Install Antora and dependencies
 npm install
