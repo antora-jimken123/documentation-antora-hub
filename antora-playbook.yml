@@ -38,7 +38,7 @@ content:
       - 2
 ui:
   bundle:
-    url: https://github.com/midokura/documentation-antora-hub/ui-bundle/3.0/ui-bundle.zip
+    url: ./ui-bundle/3.0/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
