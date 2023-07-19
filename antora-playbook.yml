@@ -4,7 +4,7 @@ antora:
     - require: '@antora/lunr-extension'
       index_latest_only: true
 git:
-  fetch_concurrency: 1
+  fetch_concurrency: 3
 runtime:
   # Set a local antora cache dir for git repositories and UI components
   cache_dir: ./.cache/antora
