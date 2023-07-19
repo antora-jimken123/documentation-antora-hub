@@ -25,9 +25,7 @@ jobs:
       run: npm install
 
     - name: Build the website using make
-      run: |
-        sed -i s/\$GITHUB_TOKEN/$GITHUB_TOKEN/ antora-playbook.yml
-        npx antora generate antora-playbook.yml --stacktrace
+      run: make docs
       env:
         GITHUB_TOKEN: ${{ secrets.MIDOJENKINS_ALLREPO_RW }}
 
