@@ -1,6 +1,6 @@
 name: start-page
-version: '1'
+version: ~
 title: _Home
 asciidoc:
   attributes:
-    full-version: '1'
+    full-version: ~
