@@ -1,2 +1,3 @@
 FROM nginx:1.21-alpine
-ADD ./build /usr/share/nginx/html
+ADD ./build/site.zip /usr/share/nginx/html
+RUN ls -la /usr/share/nginx/html
