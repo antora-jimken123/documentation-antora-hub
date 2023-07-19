@@ -19,21 +19,21 @@ content:
   edit_url: ~
   sources:
   # Generic start page
-  - url: https://$GITHUB_TOKEN:github.com/midokura/documentation-hc.git
+  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-hc
     start_path: docs
     branches:
       - 1111
       - 2222
-  - url: https://$GITHUB_TOKEN:github.com/midokura/documentation-hc-private.git
+  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-hc-private
     start_path: docs
     branches:
       - 4444
-  - url: https://$GITHUB_TOKEN:github.com/midokura/documentation-prismatic.git
+  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-prismatic
     start_path: docs
     branches:
       - 3
       - 2
-  - url: https://$GITHUB_TOKEN:github.com/midokura/documentation-antora-hub.git
+  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-antora-hub
     start_path: start-page
     branches: HEAD
 ui:
