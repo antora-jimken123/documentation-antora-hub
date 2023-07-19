@@ -19,9 +19,6 @@ content:
   edit_url: ~
   sources:
   # Generic start page
-  - url: https://github.com/midokura/documentation-antora-hub.git
-    start_path: start-page
-    branches: HEAD
   - url: https://github.com/midokura/documentation-hc.git
     start_path: docs
     branches:
@@ -36,6 +33,9 @@ content:
     branches:
       - 3
       - 2
+  - url: https://github.com/midokura/documentation-antora-hub.git
+    start_path: start-page
+    branches: HEAD
 ui:
   bundle:
     url: https://github.com/midokura/documentation-antora-ui111/releases/download/2.0/ui-bundle.zip
