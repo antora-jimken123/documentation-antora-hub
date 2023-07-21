@@ -38,7 +38,7 @@ content:
       - 2
 ui:
   bundle:
-    url: ./ui-bundle/3.0/ui-bundle.zip
+    url: ./ui-bundle/4.0-blue/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
