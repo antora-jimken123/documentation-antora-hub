@@ -1,6 +1,6 @@
 name: start-page
 title: Documentation
-version: ~
+version: '1'
 asciidoc:
   attributes:
     full-version: '1'
