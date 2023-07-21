@@ -1,4 +1,4 @@
-# Welcome to the Antora (ASCIIDocs) demo website
+# Welcome to the Midokura Antora (ASCIIDocs) demo website
 
 [options="autowidth"]
 |===
@@ -20,6 +20,6 @@ Examples of sets of content from different repos are seen in the sidebar on the 
 
 ## Sources
 
-- Playbook repo: https://github.com/midokura/documentation-opennms
+- Playbook repo: https://github.com/midokura/documentation-antora-hub
 - Example contributing repo: https://github.com/midokura/documentation-hc
 - UI repo: https://github.com/midokura/documentation-antora-ui
