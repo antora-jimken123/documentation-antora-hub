@@ -1,6 +1,6 @@
 name: start-page
-title: _Homde
-version: null
+title: Documentation
+version: ~
 asciidoc:
   attributes:
-    full-version: '7'
+    full-version: '1'
