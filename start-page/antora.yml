@@ -1,5 +1,5 @@
 name: start-page
-title: Documentation
+title: #Docs
 version: '1'
 asciidoc:
   attributes:
