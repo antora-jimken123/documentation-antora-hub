@@ -2,6 +2,7 @@
 .cache/
 public/
 build/
+tmp-playbook.yml
 
 # Node
 node_modules/

@@ -41,16 +41,18 @@ help:
 	@echo ""
 
 deps-native:
-	@command -v antora
+	@antora -v
 
 deps-docker:
-	@command -v docker
+	@docker -v
 
 deps-native-lunr: deps-native
 	npm -g list antora-site-generator-lunr
 
-docs: deps-native
-	antora --stacktrace generate $(SITE_FILE)
+docs:
+	@sed s/\$$GITHUB_TOKEN/$(GITHUB_TOKEN)/ $(SITE_FILE) > tmp-playbook.yml
+	npx antora --stacktrace generate tmp-playbook.yml
+	rm tmp-playbook.yml
 
 docs-lunr: deps-native-lunr
 	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora --generator antora-site-generator-lunr --stacktrace generate $(SITE_FILE)
