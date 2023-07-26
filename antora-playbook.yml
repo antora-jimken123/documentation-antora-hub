@@ -38,7 +38,7 @@ content:
     branches: HEAD
 ui:
   bundle:
-    url: ./ui-bundle/4.0-blue/ui-bundle.zip
+    url: ./ui-bundle/5.0-blue/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
