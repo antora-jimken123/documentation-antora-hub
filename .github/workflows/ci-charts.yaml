@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - uses: actions/setup-python@v4
         with:
           python-version: 3.7
@@ -29,8 +27,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Install helm-docs
         uses: envoy/install-helm-docs@v1.0.0
         with:
@@ -49,25 +45,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Helm
+        uses: azure/setup-helm@v3
         with:
-          fetch-depth: 0
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-  
-      - name: Generate and validate releases
-        uses: docker://ghcr.io/shivjm/helm-kubeconform-action:v0.2.0
-        with:
-          strict: true
-          additionalSchemaPaths: |
-            'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json'
-          chartsDirectory: "./charts"
-          kubernetesVersion: ${{ matrix.k8s }}
-        env:
-          HELM_UPDATE_DEPENDENCIES: "true"
+          #  version: '<version>' # default is latest (stable)
+           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install KubeConform plugin
+        run: helm plugin install https://github.com/jtyr/kubeconform-helm
+      - name: Run KubeConform
+        run: ./.github/kubeconform.sh
+          
+      
 
   # install-chart:
   #   name: install-chart

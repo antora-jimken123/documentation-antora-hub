@@ -9,7 +9,7 @@ spec:
   interval: {{ .Values.updateAutomation.updateRepositoryCheckInterval }}
   sourceRef:
     kind: GitRepository
-    name: {{ .Values.updateAutomation.updateRepositoryRef }}
+    name: {{ .Values.updateAutomation.updateRepositoryRef.name }}
   update:
     path: {{ .Values.updateAutomation.updateRepositoryPath }}
     strategy: Setters
