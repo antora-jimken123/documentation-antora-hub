@@ -6,43 +6,10 @@ on:
       - "charts/**"
 
 jobs:
-  changed:
-    runs-on: ubuntu-latest
-    outputs:
-      charts: ${{ steps.list-changed.outputs.changed }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Set up Helm
-        uses: azure/setup-helm@v3.5
-        with:
-          version: v3.6.3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.7
-      - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.3.1
-      - name: Run chart-testing (list-changed)
-        id: list-changed
-        env:
-          CT_DEBUG: "false"
-        run: |
-          changed=$(ct list-changed --config .github/ct.yaml)
-          if [[ -n "$changed" ]]; then
-            echo -n "Charts changed:"
-            echo "$changed"
-            echo "::set-output name=changed::$changed"
-          else
-            echo "PR without any chart changes - failing"
-            exit 1
-          fi
 
   lint-chart:
+    name: Lint Chart
     runs-on: ubuntu-latest
-    needs:
-      - changed
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -57,9 +24,8 @@ jobs:
         run: ct lint --config .github/ct.yaml
 
   lint-docs:
+    name: Lint Docs
     runs-on: ubuntu-latest
-    needs:
-      - changed
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -73,9 +39,8 @@ jobs:
         run: helm-docs && git diff --exit-code
 
   kubeconform-chart:
+    name: KubeConform Chart
     runs-on: ubuntu-latest
-    needs:
-      - changed
     strategy:
       matrix:
         k8s:

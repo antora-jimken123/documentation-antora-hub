@@ -1,2 +1,3 @@
-helm      latest
-helm-docs latest
+helm        latest
+helm-docs   latest
+kubeconform latest

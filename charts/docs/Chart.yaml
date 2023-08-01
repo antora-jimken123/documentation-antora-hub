@@ -1,6 +1,6 @@
 apiVersion: v2
 name: docs
-description: Antora docs for Midokura
+description: Antora docs for Midokura test
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -6,8 +6,11 @@ metadata:
   labels:
     {{- include "docs.labels" . | nindent 4 }}
 spec:
+  {{- with .Values.updateAutomation.updateRepositoryRef }}
   imageRepositoryRef:
-    {{- include "docs.selectorLabels" . | nindent 4 }}
+    name: {{ .name }}
+    namespace: {{ .namespace }}
+  {{- end }}
   policy:
     semver:
       range: {{ .Values.updateAutomation.semverRange }} # TODO make it a variable

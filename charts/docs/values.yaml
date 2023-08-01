@@ -19,7 +19,10 @@ fullnameOverride: ""
 updateAutomation:
   enabled: true
   semverRange: "5.x.x"
-  updateRepositoryRef: ""
+  # -- Flux Repository resource reference to use to create a PR
+  updateRepositoryRef:
+    name: ""
+    namespace: ""
   updateRepositoryCheckInterval: "10m"
   updateRepositoryPath: "./cluster/my-env"
 

@@ -8,8 +8,9 @@ metadata:
 spec:
   image: {{ .Values.image.repository }}
   interval: 5m
+  # Use the first imagePullSecrets as ref to fetch the image
   {{- with (first .Values.imagePullSecrets) }}
-  secretReg:
+  secretRef:
     name: {{ .name }}
   {{- end }}
 {{- end }}
