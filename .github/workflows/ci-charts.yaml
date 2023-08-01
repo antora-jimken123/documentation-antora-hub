@@ -23,14 +23,14 @@ jobs:
             src:
               - 'charts/**/Chart.yaml'
       - uses: actions/setup-python@v4
-        if: steps.changes.outputs.infra == 'true'
+        if: steps.changes.outputs.src == 'true'
         with:
           python-version: 3.9
       - name: Set up chart-testing
         if: steps.changes.outputs.src == 'true'
         uses: helm/chart-testing-action@v2.4.0
       - name: Run chart-testing (lint)
-        if: steps.list-changed.outputs.changed == 'true'
+        if: steps.changes.outputs.src == 'true'
         run: ct lint --target-branch ${{ github.event.repository.default_branch }} --config .github/ct.yaml
 
   # Validates Helm Docs are properly generated
