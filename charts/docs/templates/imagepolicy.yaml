@@ -1,0 +1,14 @@
+{{- if .Values.updateAutomation.enabled }}
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: {{ include "docs.fullname" . }}
+  labels:
+    {{- include "docs.labels" . | nindent 4 }}
+spec:
+  imageRepositoryRef:
+    {{- include "docs.selectorLabels" . | nindent 4 }}
+  policy:
+    semver:
+      range: {{ .Values.updateAutomation.semverRange }} # TODO make it a variable
+{{- end }}

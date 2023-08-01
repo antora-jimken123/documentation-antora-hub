@@ -1,0 +1,46 @@
+{{- if .Values.updateAutomation.enabled }}
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: {{ include "docs.fullname" . }}
+  labels:
+    {{- include "docs.labels" . | nindent 4 }}
+spec:
+  interval: {{ .Values.updateAutomation.updateRepositoryCheckInterval }}
+  sourceRef:
+    kind: GitRepository
+    name: {{ .Values.updateAutomation.updateRepositoryRef }}
+  update:
+    path: {{ .Values.updateAutomation.updateRepositoryPath }}
+    strategy: Setters
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+        messageTemplate: |
+            {{`Automated image update
+
+            Automation name: {{ .AutomationObject }}
+
+            Files:
+            {{ range $filename, $_ := .Updated.Files -}}
+            - {{ $filename }}
+            {{ end -}}
+
+            Objects:
+            {{ range $resource, $_ := .Updated.Objects -}}
+            - {{ $resource.Kind }} {{ $resource.Name }}
+            {{ end -}}
+
+            Images:
+            {{ range .Updated.Images -}}
+            - {{.}}
+            {{ end -}} 
+            `}}
+    push:
+      branch: flux-image-updates
+{{- end }}

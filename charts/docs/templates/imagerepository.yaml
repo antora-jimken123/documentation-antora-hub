@@ -1,0 +1,15 @@
+{{- if .Values.updateAutomation.enabled }}
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: {{ include "docs.fullname" . }}
+  labels:
+    {{- include "docs.labels" . | nindent 4 }}
+spec:
+  image: {{ .Values.image.repository }}
+  interval: 5m
+  {{- with (first .Values.imagePullSecrets) }}
+  secretReg:
+    name: {{ .name }}
+  {{- end }}
+{{- end }}
