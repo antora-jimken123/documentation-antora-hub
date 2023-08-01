@@ -5,6 +5,14 @@ on:
     branches:
     - master
   pull_request:
+    paths:
+      - ".github/**"
+      - "lib/**"
+      - "start-page/**"
+      - "supplemental_ui/**"
+      - "ui-bundle/**"
+      - "antora-playbook.yaml"
+      - "Dockerfile"
 
 jobs:
   build:
