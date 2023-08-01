@@ -4,6 +4,16 @@
 
 Antora docs for Midokura test
 
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Midokura DevOps | <team-devops@midokura.com> |  |
+
+## Requirements
+
+Kubernetes: `>= 1.25.0`
+
 ## Values
 
 | Key | Type | Default | Description |
