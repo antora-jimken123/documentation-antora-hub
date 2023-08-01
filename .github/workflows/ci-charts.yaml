@@ -64,7 +64,7 @@ jobs:
           strict: true
           additionalSchemaPaths: |
             'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json'
-          chartsDirectory: "charts"
+          chartsDirectory: "./charts"
           kubernetesVersion: ${{ matrix.k8s }}
         env:
           HELM_UPDATE_DEPENDENCIES: "true"
