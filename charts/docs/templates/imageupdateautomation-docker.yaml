@@ -1,4 +1,4 @@
-{{- if .Values.updateAutomation.enabled }}
+{{- if .Values.updateAutomation.docker.enabled }}
 # Opens a PR in a Flux Git repository whenever a new image is detected by the scanner
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation

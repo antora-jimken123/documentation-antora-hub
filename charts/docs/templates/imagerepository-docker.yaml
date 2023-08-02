@@ -1,4 +1,4 @@
-{{- if .Values.updateAutomation.enabled }}
+{{- if .Values.updateAutomation.docker.enabled }}
 # Declaration of an image repository
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository

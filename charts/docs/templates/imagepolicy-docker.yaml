@@ -1,4 +1,4 @@
-{{- if .Values.updateAutomation.enabled }}
+{{- if .Values.updateAutomation.docker.enabled }}
 # Checks for image updates in a remote repository given a semver range
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
