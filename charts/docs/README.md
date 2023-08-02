@@ -19,8 +19,8 @@ Kubernetes: `>= 1.25.0`
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| autoscaling.enabled | bool | `false` |  |
-| autoscaling.maxReplicas | int | `50` |  |
+| autoscaling.enabled | bool | `true` |  |
+| autoscaling.maxReplicas | int | `10` |  |
 | autoscaling.minReplicas | int | `2` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | fullnameOverride | string | `""` |  |
