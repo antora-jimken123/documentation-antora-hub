@@ -7,11 +7,9 @@ metadata:
   labels:
     {{- include "docs.labels" . | nindent 4 }}
 spec:
-  {{- with .Values.updateAutomation.updateRepositoryRef }}
   imageRepositoryRef:
     name: {{ include "docs.fullname" . }}-helm
     namespace: {{ .Release.Namespace }}
-  {{- end }}
   policy:
     semver:
       range: {{ .Values.updateAutomation.semverRange }}
