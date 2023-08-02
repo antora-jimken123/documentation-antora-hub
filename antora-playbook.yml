@@ -24,6 +24,7 @@ content:
     branches:
       - 1111
       - 2222
+      - 333
   - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-hc-private
     start_path: docs
     branches:
