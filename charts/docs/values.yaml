@@ -14,7 +14,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-# -- Configures automatic image upgrades via flux image update
+# Configures automatic image upgrades via flux image update
 # This opens new PRs whenever a new docker image or helm chart is detected to update Flux definitions
 updateAutomation:
   # -- Enable automation for HelmChart versions

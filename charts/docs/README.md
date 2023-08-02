@@ -52,7 +52,6 @@ Kubernetes: `>= 1.25.0`
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` |  |
-| updateAutomation | object | `{"docker":{"enabled":true},"fluxRepository":{"checkInterval":"10m","gitRepositoryRefName":"","path":""},"helm":{"chartRepository":"","enabled":true,"semverRange":"5.x.x"}}` | Configures automatic image upgrades via flux image update This opens new PRs whenever a new docker image or helm chart is detected to update Flux definitions |
 | updateAutomation.docker | object | `{"enabled":true}` | Enable automation for Docker image versions SemverRange is disabled as the chart enforces its own already |
 | updateAutomation.fluxRepository | object | `{"checkInterval":"10m","gitRepositoryRefName":"","path":""}` | Flux Repository resource reference to use to create a PR |
 | updateAutomation.fluxRepository.gitRepositoryRefName | string | `""` | Reference to a GitRepository to where PRs with changes will be opened |
