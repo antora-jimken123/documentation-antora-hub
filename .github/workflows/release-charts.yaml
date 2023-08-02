@@ -29,7 +29,7 @@ jobs:
       #   run: helm dependency update XXXXXX
     
       - name: Chart | Push
-        uses: appany/helm-oci-chart-releaser@v0.3.0
+        uses: appany/helm-oci-chart-releaser@v0.4.1
         with:
           name: ${{ github.event.inputs.chart }}
           repository: midokura/charts
@@ -38,3 +38,4 @@ jobs:
           registry: ghcr.io
           registry_username: ${{ secrets.GHCR_USERNAME_RW }}
           registry_password: ${{ secrets.GHCR_PASSWORD_RW }}
+          update_dependencies: 'true'
