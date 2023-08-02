@@ -20,11 +20,12 @@ updateAutomation:
   # -- Enable automation for HelmChart versions
   helm:
     enabled: true
-    semverRange: "5.x.x"
+    semverRange: ""
     chartRepository: ""
   # -- Enable automation for Docker image versions
   # SemverRange is disabled as the chart enforces its own already
   docker:
+    semverRange: ""
     enabled: true
   # -- Flux Repository resource reference to use to create a PR
   fluxRepository:

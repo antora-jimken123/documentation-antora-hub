@@ -12,5 +12,5 @@ spec:
     namespace: {{ .Release.Namespace }}
   policy:
     semver:
-      range: {{ .Values.updateAutomation.semverRange }}
+      range: {{ .Values.updateAutomation.helm.semverRange }}
 {{- end }}

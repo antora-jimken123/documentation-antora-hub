@@ -27,6 +27,7 @@ updateAutomation:
   # SemverRange is disabled as the chart enforces its own already
   docker:
     enabled: true
+    semverRange: "5.x.x"
   # -- Flux Repository resource reference to use to create a PR
   fluxRepository:
     # -- Reference to a GitRepository to where PRs with changes will be opened
