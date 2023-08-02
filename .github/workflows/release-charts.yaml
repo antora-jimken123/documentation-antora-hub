@@ -20,8 +20,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Helm Dependency Update
-        run: helm dependency update allure-server
+      # - name: Helm Dependency Update
+      #   run: helm dependency update XXXXXX
     
       - name: Chart | Push
         uses: appany/helm-oci-chart-releaser@v0.3.0
