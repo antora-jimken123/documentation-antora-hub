@@ -1,17 +1,18 @@
 {{- if .Values.updateAutomation.enabled }}
+# Opens a PR in a Flux Git repository whenever a new image is detected by the scanner
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: {{ include "docs.fullname" . }}
+  name: {{ include "docs.fullname" . }}-helm
   labels:
     {{- include "docs.labels" . | nindent 4 }}
 spec:
-  interval: {{ .Values.updateAutomation.updateRepositoryCheckInterval }}
+  interval: {{ .Values.updateAutomation.fluxRepository.checkInterval }}
   sourceRef:
     kind: GitRepository
-    name: {{ .Values.updateAutomation.updateRepositoryRef.name }}
+    name: {{ .Values.updateAutomation.fluxRepository.gitRepositoryRefName }}
   update:
-    path: {{ .Values.updateAutomation.updateRepositoryPath }}
+    path: {{ .Values.updateAutomation.fluxRepository.path }}
     strategy: Setters
   git:
     checkout:
@@ -22,7 +23,7 @@ spec:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
       messageTemplate: |
-          {{`Automated image update
+          {{`Automated Helm image update
 
           Automation name: {{ .AutomationObject }}
 

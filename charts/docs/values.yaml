@@ -15,16 +15,23 @@ nameOverride: ""
 fullnameOverride: ""
 
 # -- Configures automatic image upgrades via flux image update
-# This opens new PRs whenever a new docker image is detected to update Flux definitions
+# This opens new PRs whenever a new docker image or helm chart is detected to update Flux definitions
 updateAutomation:
-  enabled: true
-  semverRange: "5.x.x"
+  # -- Enable automation for HelmChart versions
+  helm:
+    enabled: true
+    semverRange: "5.x.x"
+    chartRepository: ""
+  # -- Enable automation for Docker image versions
+  # SemverRange is disabled as the chart enforces its own already
+  docker:
+    enabled: true
   # -- Flux Repository resource reference to use to create a PR
-  updateRepositoryRef:
-    name: ""
-    namespace: ""
-  updateRepositoryCheckInterval: "10m"
-  updateRepositoryPath: "./cluster/my-env"
+  fluxRepository:
+    # -- Reference to a GitRepository to where PRs with changes will be opened
+    gitRepositoryRefName: ""
+    checkInterval: "10m"
+    path: ""
 
 
 serviceAccount:
