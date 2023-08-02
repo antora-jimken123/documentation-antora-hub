@@ -1,0 +1,115 @@
+name: Lint and Test Charts
+
+on:
+  pull_request:
+    paths:
+      - "charts/**"
+
+jobs:
+
+  # Lints Chart.yml
+  lint-chart:
+    name: Lint Chart
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - 'charts/**/Chart.yaml'
+      - uses: actions/setup-python@v4
+        if: steps.changes.outputs.src == 'true'
+        with:
+          python-version: 3.9
+      - name: Set up chart-testing
+        if: steps.changes.outputs.src == 'true'
+        uses: helm/chart-testing-action@v2.4.0
+      - name: Run chart-testing (lint)
+        if: steps.changes.outputs.src == 'true'
+        run: ct lint --target-branch ${{ github.event.repository.default_branch }} --config .github/ct.yaml
+
+  # Validates Helm Docs are properly generated
+  lint-docs:
+    name: Lint Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install helm-docs
+        uses: envoy/install-helm-docs@v1.0.0
+        with:
+            version: 1.11.0
+      - name: Run helm-docs
+        run: helm-docs && git diff --exit-code
+
+  # Validates the schema of all the templates with k8s resources and CRDs
+  kubeconform-chart:
+    name: KubeConform Chart
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        k8s:
+          # Which k8s versions to test against
+          - "1.25.4"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+        with:
+          #  version: '<version>' # default is latest (stable)
+           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install KubeConform plugin
+        run: helm plugin install https://github.com/jtyr/kubeconform-helm
+      - name: Run KubeConform
+        run: ./.github/kubeconform.sh
+          
+      
+
+  # install-chart:
+  #   name: install-chart
+  #   runs-on: ubuntu-20.04
+  #   needs:
+  #     - lint-chart
+  #     - kubeconform-chart
+  #   strategy:
+  #     matrix:
+  #       k8s:
+  #         - v1.16.15
+  #         - v1.18.20
+  #         - v1.22.9
+  #         - v1.24.2
+  #         - v1.25.2
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Create kind ${{ matrix.k8s }} cluster
+  #       uses: helm/kind-action@v1.5.0
+  #       with:
+  #         node_image: kindest/node:${{ matrix.k8s }}
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: 3.7
+  #     - name: Set up chart-testing
+  #       uses: helm/chart-testing-action@v2.3.1
+  #     - name: Run chart-testing (install)
+  #       run: ct install --config .github/ct.yaml
+
+  pr-validated:
+    name: PR Validated
+    runs-on: ubuntu-latest
+    needs:
+      - lint-chart
+      - kubeconform-chart
+    steps:
+      - name: validate
+        run: echo "PR OK"

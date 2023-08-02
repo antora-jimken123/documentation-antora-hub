@@ -1,0 +1,17 @@
+{{- if .Values.updateAutomation.helm.enabled }}
+# Declaration of an image repository
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: {{ include "docs.fullname" . }}-helm
+  labels:
+    {{- include "docs.labels" . | nindent 4 }}
+spec:
+  image: {{ .Values.updateAutomation.helm.chartRepository }}
+  interval: 5m
+  # Use the first imagePullSecrets as ref to fetch the image
+  {{- with (first .Values.imagePullSecrets) }}
+  secretRef:
+    name: {{ .name }}
+  {{- end }}
+{{- end }}
