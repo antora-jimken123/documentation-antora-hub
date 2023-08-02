@@ -6,6 +6,11 @@ on:
       tag:
         description: 'Helm Chart tag to Release'  
         required: true
+      chart:
+        type: choice
+        description: Make a choice
+        options:
+        - docs
 
 jobs:
   release:
@@ -26,10 +31,10 @@ jobs:
       - name: Chart | Push
         uses: appany/helm-oci-chart-releaser@v0.3.0
         with:
-          name: mido-docs
+          name: ${{ github.event.inputs.chart }}
           repository: midokura/charts
           tag: ${{ github.event.inputs.tag }}
-          path: mido-docs
+          path: ./charts/${{ github.event.inputs.chart }}
           registry: ghcr.io
           registry_username: ${{ secrets.GHCR_USERNAME_RW }}
           registry_password: ${{ secrets.GHCR_PASSWORD_RW }}
