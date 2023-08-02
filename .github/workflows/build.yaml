@@ -33,7 +33,7 @@ jobs:
       id: npmversion
       run: |
         npm install
-        VERSION=npm pkg get version
+        VERSION=${npm pkg get version)
         echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
 
     - name: Build the website using make
