@@ -21,7 +21,7 @@ updateAutomation:
   helm:
     enabled: true
     semverRange: ""
-    chartRepository: ""
+    chartRepository: "ghcr.io/midokura/charts/docs"
   # -- Enable automation for Docker image versions
   # SemverRange is disabled as the chart enforces its own already
   docker:
@@ -30,7 +30,7 @@ updateAutomation:
   # -- Flux Repository resource reference to use to create a PR
   fluxRepository:
     # -- Reference to a GitRepository to where PRs with changes will be opened
-    gitRepositoryRefName: ""
+    gitRepositoryRefName: "flux-system"
     checkInterval: "10m"
     path: ""
 
@@ -49,13 +49,13 @@ podAnnotations: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext:
-  capabilities:
-    drop:
-    - ALL
-  readOnlyRootFilesystem: true
-  runAsNonRoot: true
-  runAsUser: 1000
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
 
 service:
   type: ClusterIP
