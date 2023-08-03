@@ -44,5 +44,5 @@ spec:
           {{ end -}} 
           `}}
     push:
-      branch: flux-image-updates
+      branch: automatic-flux/{{ include "docs.fullname" . }}-helm
 {{- end }}
