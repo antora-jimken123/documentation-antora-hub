@@ -11,7 +11,7 @@ spec:
   sourceRef:
     # Use already created GitRepositories configured at flux-system level
     kind: GitRepository
-    name: {{ .Value.updateAutomation.fluxRepository.gitRepositoryRef }}
+    name: {{ .Values.updateAutomation.fluxRepository.gitRepositoryRef }}
     namespace: flux-system
   update:
     path: {{ .Values.updateAutomation.fluxRepository.path }}

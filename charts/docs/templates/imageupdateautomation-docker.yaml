@@ -10,7 +10,7 @@ spec:
   interval: {{ .Values.updateAutomation.fluxRepository.checkInterval }}
   sourceRef:
     kind: GitRepository
-    name: {{ .Value.updateAutomation.fluxRepository.gitRepositoryRef }}
+    name: {{ .Values.updateAutomation.fluxRepository.gitRepositoryRef }}
     namespace: flux-system
   update:
     path: {{ .Values.updateAutomation.fluxRepository.path }}
