@@ -11,7 +11,8 @@ spec:
   sourceRef:
     # Use already created GitRepositories configured at flux-system level
     kind: GitRepository
-    name: {{ include "docs.fullname" . }}
+    name: {{ .Value.updateAutomation.fluxRepository.gitRepositoryRef }}
+    namespace: flux-system
   update:
     path: {{ .Values.updateAutomation.fluxRepository.path }}
     strategy: Setters
