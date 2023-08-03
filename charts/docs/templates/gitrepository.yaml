@@ -10,7 +10,5 @@ spec:
   url: {{ .Values.updateAutomation.fluxRepository.gitRepository }}
   ref:
     branch: master
-  {{- with (first .Values.imagePullSecrets) }}
   secretRef:
-    name: {{ .name }}
-  {{- end }}
+    name: {{ .Values.updateAutomation.fluxRepository.secretRef }}

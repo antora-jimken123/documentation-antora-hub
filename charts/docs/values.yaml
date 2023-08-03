@@ -31,6 +31,7 @@ updateAutomation:
   fluxRepository:
     # -- Reference to a GitRepository to where PRs with changes will be opened
     gitRepository: "https://github.com/midokura/flux-platform"
+    secretRef: ""
     checkInterval: "10m"
     path: ""
 
