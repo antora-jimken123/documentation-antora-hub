@@ -28,17 +28,17 @@ spec:
           {{`Automated Helm image update
 
           Automation name: {{ .AutomationObject }}
-
+          
           Files:
           {{ range $filename, $_ := .Updated.Files -}}
           - {{ $filename }}
           {{ end -}}
-
+          
           Objects:
           {{ range $resource, $_ := .Updated.Objects -}}
           - {{ $resource.Kind }} {{ $resource.Name }}
           {{ end -}}
-
+          
           Images:
           {{ range .Updated.Images -}}
           - {{.}}
