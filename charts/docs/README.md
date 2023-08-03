@@ -50,8 +50,8 @@ Kubernetes: `>= 1.25.0`
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` |  |
 | updateAutomation.docker | object | `{"enabled":true,"semverRange":""}` | Enable automation for Docker image versions SemverRange is disabled as the chart enforces its own already |
-| updateAutomation.fluxRepository | object | `{"checkInterval":"10m","gitRepositoryRefName":"flux-system","path":""}` | Flux Repository resource reference to use to create a PR |
-| updateAutomation.fluxRepository.gitRepositoryRefName | string | `"flux-system"` | Reference to a GitRepository to where PRs with changes will be opened |
+| updateAutomation.fluxRepository | object | `{"checkInterval":"10m","gitRepository":"https://github.com/midokura/flux-platform","path":""}` | Flux Repository resource reference to use to create a PR |
+| updateAutomation.fluxRepository.gitRepository | string | `"https://github.com/midokura/flux-platform"` | Reference to a GitRepository to where PRs with changes will be opened |
 | updateAutomation.helm | object | `{"chartRepository":"ghcr.io/midokura/charts/docs","enabled":true,"semverRange":""}` | Enable automation for HelmChart versions |
 
 ----------------------------------------------

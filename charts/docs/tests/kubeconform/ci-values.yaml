@@ -31,7 +31,7 @@ updateAutomation:
   # -- Flux Repository resource reference to use to create a PR
   fluxRepository:
     # -- Reference to a GitRepository to where PRs with changes will be opened
-    gitRepositoryRefName: "refGitRepoFlux"
+    gitRepository: "https://github.com/midokura/flux-platform"
     checkInterval: "10m"
     path: ".cluster/my-env"
 

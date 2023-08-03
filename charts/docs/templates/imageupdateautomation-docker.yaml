@@ -10,8 +10,7 @@ spec:
   interval: {{ .Values.updateAutomation.fluxRepository.checkInterval }}
   sourceRef:
     kind: GitRepository
-    name: {{ .Values.updateAutomation.fluxRepository.gitRepositoryRefName }}
-    namespace: flux-system
+    name: {{ include "docs.fullname" . }}
   update:
     path: {{ .Values.updateAutomation.fluxRepository.path }}
     strategy: Setters
