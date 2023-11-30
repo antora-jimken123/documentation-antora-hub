@@ -1,34 +1,55 @@
 # Antora (ASCIIDocs) Documentation
 
-This is the repository for the https://test.docs.midokura.com[Test Documentation website]. It is built with https://antora.org[Antora].
+This is the repository for the https://test.docs.mido-tools.midokura.com[Test Documentation website]. It is built with https://antora.org[Antora].
 
 ## Install locally (using private repos)
 
 Background: https://docs.antora.org/antora/2.3/install-and-run-quickstart[Install antora] with software dependencies.
 
+Install Node and Npm, for instance using nvm:
+
 ```bash
-# Install Node and Npm, for instance using nvm:
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install node
+```
 
-# If the antora installation succeeds, `antora -v` will return antora's version.
+If the antora installation succeeds, `antora -v` will return antora's version:
 
-# Clone this repository
+```bash
+antora -v
+```
+
+Clone this repository:
+
+```bash
 git clone https://github.com/midokura/documentation-antora-hub
 cd documentation-antora-hub
-
-# Install Antora and dependencies
-npm install
-
-# Export into your terminal your PAT
-export GITHUB_TOKEN=<your PAT here>
-
-# build the static site
-# This replaces your PAT token in `antora-playbook.yml` and triggers a build
-make docs
-
-# The generated website will be created under ```public/``` folder. Open ```index.html``` with any browser.
-xdg-open public/index.html
-
-# A zipped version is also stored in `build/site.zip`
 ```
+
+Install Antora and dependencies:
+
+```bash
+npm install
+```
+
+Export your PAT into your terminal:
+
+```bash
+export GITHUB_TOKEN=<your PAT here>
+```
+
+## Build the static site
+
+This replaces your PAT token in `antora-playbook.yml` and triggers a build:
+
+```bash
+make docs
+```
+
+The generated website will be created under ```public/``` folder. Open ```index.html``` with any browser:
+
+```bash
+xdg-open public/index.html
+```
+
+A zipped version is also stored in `build/site.zip`.
