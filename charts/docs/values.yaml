@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/midokura/documentation-antora-hub
+  repository: ghcr.io/foobar/documentation-antora-hub
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -21,7 +21,7 @@ updateAutomation:
   helm:
     enabled: true
     semverRange: ""
-    chartRepository: "ghcr.io/midokura/charts/docs"
+    chartRepository: "ghcr.io/foobar/charts/docs"
   # -- Enable automation for Docker image versions
   # SemverRange is disabled as the chart enforces its own already
   docker:

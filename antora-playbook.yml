@@ -12,29 +12,29 @@ runtime:
 site:
   title: Docs
   # the 404 page and sitemap files only get generated when the url property is set
-  url: https://test.docs.midokura.com
+  url: https://test.docs.foobar.com
   start_page: start-page::index.adoc
   robots: disallow
 content:
   edit_url: ~
   sources:
   # Generic start page
-  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-hc
+  - url: https://$GITHUB_TOKEN:@github.com/foobar/documentation-hc
     start_path: docs
     branches:
       - 1111
       - 2222
       - 333
-  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-hc-private
+  - url: https://$GITHUB_TOKEN:@github.com/foobar/documentation-hc-private
     start_path: docs
     branches:
       - 4444
-  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-prismatic
+  - url: https://$GITHUB_TOKEN:@github.com/foobar/documentation-prismatic
     start_path: docs
     branches:
       - 3
       - 2
-  - url: https://$GITHUB_TOKEN:@github.com/midokura/documentation-antora-hub
+  - url: https://$GITHUB_TOKEN:@github.com/foobar/documentation-antora-hub
     start_path: start-page
     branches: HEAD
 ui:

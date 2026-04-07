@@ -1,4 +1,4 @@
-# Welcome to the Midokura Antora (ASCIIDocs) demo website
+# Welcome to the foobar Antora (ASCIIDocs) demo website
 
 [options="autowidth"]
 |===
@@ -14,12 +14,12 @@ The website requires:
 - several contributing repos that supply the content.
 - a UI repo that styles the website.
 
-Any repo can contribute by setting up a specific folder structure for Antora and having it referenced in the playbook repo. Instructions and template here: https://github.com/midokura/documentation-hc/tree/main#readme
+Any repo can contribute by setting up a specific folder structure for Antora and having it referenced in the playbook repo. Instructions and template here: https://github.com/foobar/documentation-hc/tree/main#readme
 
 Examples of sets of content from different repos are seen in the sidebar on the left. To toggle to a different version click in the sidebar or the dropdown on the top right corner.
 
 ## Sources
 
-- Playbook repo: https://github.com/midokura/documentation-antora-hub
-- Example contributing repo: https://github.com/midokura/documentation-hc
-- UI repo: https://github.com/midokura/documentation-antora-ui
+- Playbook repo: https://github.com/foobar/documentation-antora-hub
+- Example contributing repo: https://github.com/foobar/documentation-hc
+- UI repo: https://github.com/foobar/documentation-antora-ui

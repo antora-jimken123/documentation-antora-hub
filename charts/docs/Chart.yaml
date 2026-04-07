@@ -1,6 +1,6 @@
 apiVersion: v2
 name: docs
-description: Antora docs for Midokura test
+description: Antora docs for foobar test
 type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
@@ -17,7 +17,7 @@ appVersion: "1.16.0"
 kubeVersion: ">= 1.25.0"
 keywords:
   - "docs"
-  - "midokura"
+  - "foobar"
 maintainers:
-  - name: Midokura DevOps
-    email: team-devops@midokura.com
+  - name: foobar DevOps
+    email: team-devops@foobar.com

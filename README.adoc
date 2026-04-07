@@ -1,6 +1,6 @@
 # Antora (ASCIIDocs) Documentation
 
-This is the repository for the https://test.docs.mido-tools.midokura.com[Test Documentation website]. It is built with https://antora.org[Antora].
+This is the repository for the https://test.docs.mido-tools.foobar.com[Test Documentation website]. It is built with https://antora.org[Antora].
 
 ## Install locally (using private repos)
 
@@ -22,7 +22,7 @@ antora -v
 Clone this repository:
 
 ```bash
-git clone https://github.com/midokura/documentation-antora-hub
+git clone https://github.com/foobar/documentation-antora-hub
 cd documentation-antora-hub
 ```
 

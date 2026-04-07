@@ -32,7 +32,7 @@ jobs:
         uses: appany/helm-oci-chart-releaser@v0.4.1
         with:
           name: ${{ github.event.inputs.chart }}
-          repository: midokura/charts
+          repository: foobar/charts
           tag: ${{ github.event.inputs.tag }}
           path: ./charts/${{ github.event.inputs.chart }}
           registry: ghcr.io
